@@ -74,10 +74,10 @@ echo -e  " ${red}CONTACT TELEGRAM            : @GHReyz"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
 echo -e  " ${bred}                         • MAIN MENU •                           "${NC}                                      
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${red}[  1 ] SSH & OPENVPN                       [  2 ] WIREGUARD" 
-echo -e  " ${red}[  3 ] SHADOWSOCKS R                       [  4 ] SHADOWSOCKS OBFS"
-echo -e  " ${red}[  5 ] V2RAY CORE                          [  6 ] XRAY CORE" 
-echo -e  " ${red}[  7 ] TROJAN GFW" 
+echo -e  " ${red}[  1 ] SSH & OPENVPN                   [  2 ] WIREGUARD" 
+echo -e  " ${red}[  3 ] SHADOWSOCKS R                   [  4 ] SHADOWSOCKS OBFS"
+echo -e  " ${red}[  5 ] V2RAY CORE                      [  6 ] XRAY CORE" 
+echo -e  " ${red}[  7 ] TROJAN GFW                      [ 00 ] BANDWIDTH SERVER"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
 echo -e  " ${bred}                        • SYSTEM MENU •                          "${NC}   
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "                       
@@ -157,7 +157,10 @@ echo -e "\e[0m"
    18)
    checksystem  
    ;;
-   19)
+  00)
+   vnstat
+   ;; 
+  19)
    update  
    ;;   
    0)
