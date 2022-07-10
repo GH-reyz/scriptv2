@@ -38,7 +38,6 @@ fram=$(free -m | awk 'NR==2 {print $4}')
 cpu_usage+=" %"
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $3}')
-bulan=$(date +%b)
 vnstat_profile=$(vnstat | sed -n '3p' | awk '{print $1}')
 vnstat -i ${vnstat_profile} >/root/t1
 today=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $8}')
@@ -78,6 +77,8 @@ else
   yesterday_rxv=NULL
   yesterday_tx=NULL
   yesterday_txv=NULL
+fi
+rm -f /root/t1
 echo -e  " "
 echo -e  "  ${red}██████╗░███████╗██╗░░░██╗███████╗░░░ ████████╗███████╗░█████╗░██╗░░██╗" 
 echo -e  "  ██╔══██╗██╔════╝╚██╗░██╔╝╚════██║░░░╚══ ██╔══╝██╔════╝██╔══██╗██║░░██║" 
@@ -120,7 +121,7 @@ echo -e  " ${red}═════════════════════
 echo -e  " ${red}[  1 ] SSH & OPENVPN                   [  2 ] WIREGUARD" 
 echo -e  " ${red}[  3 ] SHADOWSOCKS R                   [  4 ] SHADOWSOCKS OBFS"
 echo -e  " ${red}[  5 ] V2RAY CORE                      [  6 ] XRAY CORE" 
-echo -e  " ${red}[  7 ] TROJAN GFW                      [ 00 ] BANDWIDTH SERVER"
+echo -e  " ${red}[  7 ] TROJAN GFW"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
 echo -e  " ${bred}                        • SYSTEM MENU •                          "${NC}   
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "                       
@@ -130,7 +131,7 @@ echo -e  " [ 12 ] WEBMIN MENU                     [ 13 ] CHECK RAM USAGE"
 echo -e  " [ 14 ] REBOOT VPS                      [ 15 ] SPEEDTEST VPS"
 echo -e  " [ 16 ] SYSTEM INFORMATION              [ 17 ] CHECK GEO LOCATION"
 echo -e  " [ 18 ] CHECK SERVICE ERROR             [ 19 ] UPDATE SCRIPT"
-echo -e  " [ 19 ] UPDATE SCRIPT                   [  0 ] EXIT MENU${NC} "
+echo -e  " [ 0 ] EXIT MENU${NC}                   [ 00 ] BANDWIDTH SERVER"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "
 echo -e  " ${white}Premium Script By Reyz-V4" 
 echo -e  " ${white}Thank You For Using Script By Reyz-V4" 
