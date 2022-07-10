@@ -38,6 +38,16 @@ fram=$(free -m | awk 'NR==2 {print $4}')
 cpu_usage+=" %"
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $3}')
+c_xtls=$(grep -oc '### [^ ]*' /etc/xray/vless-direct.json | cut -d' ' -f2)
+c_xvmess=$(grep -oc '### [^ ]*' /etc/xray/v2ray-tls.json | cut -d' ' -f2)
+c_xvless=$(grep -oc '### [^ ]*' /etc/xray/vless-tls.json | cut -d' ' -f2)
+c_grpc=$(grep -oc '### [^ ]*' /etc/xray/vless-grpc.json | cut -d' ' -f2)
+c_vmess=$(grep -oc '### [^ ]*' /etc/v2ray/config.json | cut -d' ' -f2)
+c_vless=$(grep -oc '### [^ ]*' /etc/v2ray/vless.json | cut -d' ' -f2)
+total_xray=$(($c_xtls + $c_xvmess + $c_xvless + $c_grpc))
+total_v2ray=$(($c_vmess + $c_vless))
+total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+bulan=$(date +%b)
 vnstat_profile=$(vnstat | sed -n '3p' | awk '{print $1}')
 vnstat -i ${vnstat_profile} >/root/t1
 today=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $8}')
