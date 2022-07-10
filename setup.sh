@@ -50,7 +50,7 @@ MYIP=$(wget -qO- icanhazip.com);
 
 echo -e "${green}CHECKING SCRIPT ACCESS${NC}"
 sleep 2
-IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $MYIP | awk '{print $4}')
+IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $MYIP | awk '{print $4}')
 if [ $MYIP = $IZIN ]; then
     echo -e ""
     echo -e "${green}ACCESS GRANTED...${NC}"
@@ -105,7 +105,7 @@ echo -e "============================================="
 echo -e " ${green} INSTALLING SSH && OVPN && WS ${NC}"
 echo -e "============================================="
 sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 sleep 2
 clear
 
@@ -114,7 +114,7 @@ echo -e "============================================="
 echo -e " ${green} INSTALLING SHADOWSOCKS R${NC} "
 echo -e "============================================="
 sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 sleep 2
 clear
 
@@ -123,7 +123,7 @@ echo -e "============================================="
 echo -e " ${green} INSTALLING SHADOWSOCKS OBFS${NC} "
 echo -e "============================================="
 sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 sleep 2
 clear
 
@@ -132,7 +132,7 @@ echo -e "============================================="
 echo -e " ${green} INSTALLING WIREGUARD${NC} "
 echo -e "============================================="
 sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 sleep 2
 clear
 
@@ -141,7 +141,7 @@ echo -e "============================================="
 echo -e " ${green}  INSTALLING V2RAY${NC} "
 echo -e "============================================="
 sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 sleep 2
 clear
 
@@ -150,7 +150,7 @@ echo -e "============================================="
 echo -e " ${green} INSTALLING XRAY${NC} "
 echo -e "============================================="
 sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/install-xray.sh && chmod +x install-xray.sh && screen -S v2ray ./install-xray.sh
+wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/install-xray.sh && chmod +x install-xray.sh && screen -S v2ray ./install-xray.sh
 sleep 2
 clear
 
@@ -159,7 +159,7 @@ echo -e "============================================="
 echo -e " ${green}  INSTALLING OHP${NC} "
 echo -e "============================================="
 sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/script/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 sleep 2
 clear
 
@@ -183,7 +183,7 @@ clear
 echo " "
 echo "Installation Completed!!"
 echo " "
-echo "========================= REYZ-V4 AUTOSCRIPT VERSION 1 ====================" | tee -a log-install.txt
+echo "========================= GH-REYZ AUTOSCRIPT VERSION 2 ====================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
@@ -231,7 +231,7 @@ echo "   - Modded by               : GHReyz / ReyzV4"  | tee -a log-install.txt
 echo "   - Telegram                : t.me/GHReyz"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "=========================== SCRIPT BY REYZ-V4 =========================" | tee -a log-install.txt
+echo "=========================== SCRIPT BY GH-REYZ =========================" | tee -a log-install.txt
 echo ""
 sleep 1
 rm -f setup.sh
