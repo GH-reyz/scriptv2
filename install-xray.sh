@@ -707,7 +707,7 @@ wget -O del-xtls "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/del-xt
 wget -O renew-xtls "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/renew-xtls.sh"
 wget -O cek-xtls "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/cek-xtls.sh"
 wget -O port-xtls "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/port-xtls.sh"
-wget -O recert-xrayv2ray "https://raw.githubusercontent.com/GH-reyz/script/main/recert-xrayv2ray.sh"
+wget -O recert-xrayv2ray "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/recert-xrayv2ray.sh"
 chmod +x mxraycore
 chmod +x mv2raycore
 chmod +x add-xvmess
