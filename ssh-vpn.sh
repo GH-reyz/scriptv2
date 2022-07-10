@@ -85,14 +85,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/GH-reyz/script/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/GH-reyz/script/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/GH-reyz/script/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
