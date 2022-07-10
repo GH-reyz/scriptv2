@@ -1,4 +1,4 @@
-#!/bin/bash
+ini#!/bin/bash
 clear
 red='\e[1;31m'
 white='\e[1;37m'
@@ -141,7 +141,7 @@ echo -e  " [ 12 ] WEBMIN MENU                     [ 13 ] CHECK RAM USAGE"
 echo -e  " [ 14 ] REBOOT VPS                      [ 15 ] SPEEDTEST VPS"
 echo -e  " [ 16 ] SYSTEM INFORMATION              [ 17 ] CHECK GEO LOCATION"
 echo -e  " [ 18 ] CHECK SERVICE ERROR             [ 19 ] UPDATE SCRIPT"
-echo -e  " [ 0 ] EXIT MENU${NC}                   [ 00 ] BANDWIDTH SERVER"
+echo -e  " [ 0 ] EXIT MENU${NC}                         [ 00 ] BANDWIDTH SERVER"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "
 echo -e  " ${white}Premium Script By Reyz-V4" 
 echo -e  " ${white}Thank You For Using Script By Reyz-V4" 
