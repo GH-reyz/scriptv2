@@ -69,7 +69,7 @@ echo -e "==============================="
 echo -e "PORT SSH WS NON TLS          : 2082"
 echo -e "PORT OVPN WS B               : 2095"
 echo -e "==============================="
-echo -e "Script By JINGGO007"
+echo -e "Script By GHReyz"
 
 cd
 rm -f /root/edu.sh
