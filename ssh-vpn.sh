@@ -18,7 +18,7 @@ commonname=REYZVPN
 email=muhammadzamri150@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/GH-reyz/script/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
