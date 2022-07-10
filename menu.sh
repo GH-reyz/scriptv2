@@ -2,7 +2,7 @@
 clear
 red='\e[1;31m'
 white='\e[1;37m'
-bred='\e[41m'
+bred='\e[0;47;30m'
 green='\e[0;32m'
 blue='\e[0;34m'
 blue_b='\e[0;94m'
