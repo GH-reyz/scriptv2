@@ -49,11 +49,11 @@ echo -e  "  ╚═╝░░╚═╝╚══════╝░░░╚═╝�
 echo -e  " "
 echo -e  " ${red} Premium Script"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${bred}                      • SERVER INFORMATION •              "${NC}
+echo -e  " ${bred}                      • SERVER INFORMATION •                  "${NC}
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
 echo -e  " ${red}CPU MODEL                   : $cname"
 echo -e  " ${red}NUMBER OF CORES             : $cores"
-echo -e  " ${red}CPU USAGE                   : $cpu_usage1
+echo -e  " ${red}CPU USAGE                   : $cpu_usage1 %"
 echo -e  " ${red}TOTAL RAM                   : $tram MB"
 echo -e  " ${red}USED RAM                    : $uram MB"
 echo -e  " ${red}FREE RAM                    : $fram MB"
@@ -72,7 +72,7 @@ echo -e  " ${red}CLIENT NAME                 : $name${NC}"
 echo -e  " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e  " ${red}CONTACT TELEGRAM            : @GHReyz" 
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${bred}                         • MAIN MENU •                    "${NC}                                      
+echo -e  " ${bred}                         • MAIN MENU •                        "${NC}                                      
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
 echo -e  " ${red}[  1 ] SSH & OPENVPN" 
 echo -e  " ${red}[  2 ] WIREGUARD" 
@@ -82,7 +82,7 @@ echo -e  " ${red}[  5 ] V2RAY CORE"
 echo -e  " ${red}[  6 ] XRAY CORE" 
 echo -e  " ${red}[  7 ] TROJAN GFW" 
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${bred}                        • SYSTEM MENU •                   "${NC}   
+echo -e  " ${bred}                        • SYSTEM MENU •                       "${NC}   
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "                       
 echo -e  " ${red}[  8 ] ADD/CHANGE DOMAIN VPS"
 echo -e  " [  9 ] CHANGE PORT SERVICE"
