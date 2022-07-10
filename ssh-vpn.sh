@@ -122,7 +122,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/GH-reyz/script/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -181,10 +181,10 @@ apt -y install tmux
 apt -y install ruby
 gem install lolcat
 apt -y install figlet
-wget -q https://raw.githubusercontent.com/GH-reyz/script/main/edu.sh && chmod +x edu.sh && ./edu.sh
+wget -q https://raw.githubusercontent.com/GH-reyz/scriptv2/main/edu.sh && chmod +x edu.sh && ./edu.sh
 
 #OpenVPN
-wget https://raw.githubusercontent.com/GH-reyz/script/main/vpn.sh && chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -218,7 +218,7 @@ service iptables restart
 clear
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/GH-reyz/script/main/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/issue.net"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -245,34 +245,34 @@ echo -e " ${green} DOWNLOAD MENU SCRIPT ${NC}"
 echo -e "============================================="
 sleep 2
 cd /usr/bin
-wget -O mssh "https://raw.githubusercontent.com/GH-reyz/script/main/mssh.sh"
-wget -O menu "https://raw.githubusercontent.com/GH-reyz/script/main/menu.sh"
-wget -O add-host "https://raw.githubusercontent.com/GH-reyz/script/main/add-host.sh"
-wget -O usernew "https://raw.githubusercontent.com/GH-reyz/script/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/GH-reyz/script/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/GH-reyz/script/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/GH-reyz/script/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/GH-reyz/script/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/GH-reyz/script/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/GH-reyz/script/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/GH-reyz/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/GH-reyz/script/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/GH-reyz/script/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/GH-reyz/script/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/GH-reyz/script/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/GH-reyz/script/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/GH-reyz/script/main/tendang.sh"
-wget -O change "https://raw.githubusercontent.com/GH-reyz/script/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/GH-reyz/script/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/GH-reyz/script/main/port-ssl.sh"
-wget -O port-squid "https://raw.githubusercontent.com/GH-reyz/script/main/port-squid.sh"
-wget -O wbmn "https://raw.githubusercontent.com/GH-reyz/script/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/GH-reyz/script/main/xp.sh"
-wget -O checksystem "https://raw.githubusercontent.com/GH-reyz/script/main/checksystem.sh"
-wget -O jinggo "https://raw.githubusercontent.com/GH-reyz/script/main/jinggo.sh"
-wget -O mdns "https://raw.githubusercontent.com/GH-reyz/script/main/mdns.sh"
-wget -O nf "https://raw.githubusercontent.com/GH-reyz/script/main/nf.sh"
-wget -O update "https://raw.githubusercontent.com/GH-reyz/script/main/update.sh"
+wget -O mssh "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/mssh.sh"
+wget -O menu "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/menu.sh"
+wget -O add-host "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/add-host.sh"
+wget -O usernew "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/tendang.sh"
+wget -O change "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/port-ssl.sh"
+wget -O port-squid "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/port-squid.sh"
+wget -O wbmn "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/xp.sh"
+wget -O checksystem "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/checksystem.sh"
+wget -O jinggo "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/jinggo.sh"
+wget -O mdns "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/mdns.sh"
+wget -O nf "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/nf.sh"
+wget -O update "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/update.sh"
 chmod +x mssh
 chmod +x menu
 chmod +x add-host
