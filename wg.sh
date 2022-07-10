@@ -93,12 +93,12 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O mwg "https://raw.githubusercontent.com/GH-reyz/script/main/WG/mwg.sh"
-wget -O add-wg "https://raw.githubusercontent.com/GH-reyz/script/main/add-wg.sh"
-wget -O del-wg "https://raw.githubusercontent.com/GH-reyz/script/main/del-wg.sh"
-wget -O cek-wg "https://raw.githubusercontent.com/GH-reyz/script/main/cek-wg.sh"
-wget -O renew-wg "https://raw.githubusercontent.com/GH-reyz/script/main/renew-wg.sh"
-wget -O port-wg "https://raw.githubusercontent.com/GH-reyz/script/main/port-wg.sh"
+wget -O mwg "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/WG/mwg.sh"
+wget -O add-wg "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/renew-wg.sh"
+wget -O port-wg "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/port-wg.sh"
 chmod +x mwg
 chmod +x add-wg
 chmod +x del-wg
