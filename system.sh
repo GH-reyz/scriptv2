@@ -6,9 +6,9 @@ NC='\e[0m'
 ok='\e[0;m'
 
 echo -e  " ${red}=========================================================================="
-echo -e  " ${}                                  SYSTEM MENU "                                                                                                  
+echo -e  " ${red}                                  SYSTEM MENU "                                                                                                  
 echo -e  " ${red}=========================================================================="
-echo -e  " ${red}[  1 ] ADD/CHANGE DOMAIN VPS           [  2 ] CHANGE PORT SERVICE"
+echo -e  " ${red}[ 1 ] ADD/CHANGE DOMAIN VPS           [  2 ] CHANGE PORT SERVICE"
 echo -e  " [ 3 ] CHANGE DNS SERVER               [ 4 ] RENEW CERTIFICATION"
 echo -e  " [ 5 ] WEBMIN MENU                     [ 6 ] CHECK RAM USAGE"
 echo -e  " [ 7 ] SPEEDTEST VPS                   [ 8 ] CHECK GEO LOCATION "
