@@ -75,8 +75,10 @@ wget -O renew-xtls "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/rene
 wget -O cek-xtls "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/cek-xtls.sh"
 wget -O port-xtls "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/port-xtls.sh"
 wget -O recert-xrayv2ray "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/recert-xrayv2ray.sh"
+wget -o menu1 "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/menu1.sh"
 chmod +x mssh
 chmod +x menu
+chmod +x menu1
 chmod +x add-host
 chmod +x usernew
 chmod +x trial
