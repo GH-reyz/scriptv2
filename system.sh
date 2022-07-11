@@ -6,7 +6,7 @@ NC='\e[0m'
 ok='\e[0;47;30m'
 
 echo -e  " ${red}=========================================================================="
-echo -e  " ${ok}                                  SYSTEM MENU "                                                                                                  "
+echo -e  " ${ok}                                  SYSTEM MENU "                                                                                                  
 echo -e  " ${red}=========================================================================="
 echo -e  " ${red}[  1 ] ADD/CHANGE DOMAIN VPS           [  2 ] CHANGE PORT SERVICE"
 echo -e  " [ 3 ] CHANGE DNS SERVER               [ 4 ] RENEW CERTIFICATION"
