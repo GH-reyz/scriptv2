@@ -126,7 +126,8 @@ echo -e "\e[0m"
    0)
    sleep 0.5
    clear
-   jinggo
+   exit
+   clear
    ;;
    *)
    echo -e "ERROR!! Please Enter an Correct Number"
