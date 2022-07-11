@@ -73,10 +73,12 @@ echo -e  " ${red}CONTACT TELEGRAM            : @GHReyz"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
 echo -e  " ${bred}                         • MAIN MENU •                           "${NC}                                      
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${red}[  1 ] SSH & OPENVPN                   [  2 ] WIREGUARD" 
-echo -e  " ${red}[  3 ] SHADOWSOCKS R                   [  4 ] SHADOWSOCKS OBFS"
-echo -e  " ${red}[  5 ] V2RAY CORE                      [  6 ] XRAY CORE" 
-echo -e  " ${red}[  7 ] TROJAN GFW                      [ 00 ] SYSTEM MENU"
+echo -e  " ${red}[  1 ] SSH & OPENVPN                   [  7 ] TROJAN GFW" 
+echo -e  " ${red}[  2 ] WIREGUARD                       [  8 ] REBOOT SERVER"
+echo -e  " ${red}[  3 ] SHADOWSOCKS R                   [ 9  ] UPDATE SCRIPT" 
+echo -e  " ${red}[  4 ] SHADOWSOCKS OBFS                [ 10 ] SYSTEM MENU"
+echo -e  " ${red}[  5 ] V2RAY CORE                      [ 11 ] CHANGE PASSWORD"
+echo -e  " ${red}[  6 ] XRAY CORE                       [ 12 ] DONT PUSH !"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "                           
 echo -e  " ${red}[  0 ] EXIT MENU${NC} "
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "
@@ -110,43 +112,16 @@ echo -e "\e[0m"
    mtrojan
    ;;
    8)
-   add-host
-   ;;
-   9)
-   change
-   ;;
-   10)
-   mdns
-   ;;
-   11)
-   recert-xrayv2ray
-   ;;
-   12)
-   wbmn
-   ;;
-   13)
-   ram
-   ;;
-   14)
    reboot
    ;;
-   15)
-   speedtest
+   9)
+   update
    ;;
-   16)
-   info
-   ;;
-   17)
-   nf
-   ;;
-   18)
-   checksystem  
-   ;;
-  00)
+   10)
    system
-   ;; 
-  19)
-   update  
+   ;;
+   11)
+   passwd
    ;;     
    0)
    sleep 0.5
