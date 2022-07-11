@@ -1,11 +1,11 @@
-ini#!/bin/bash
+#!/bin/bash
 clear
-red='\e[1;35m'
-bred1='\e[45m'
+red='\e[1;31m'
+bred1='\e[0;47;30m
 bred='\e[41m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
-yellow='\e[1;33m'
+yellow='\e[1;31m'
 purple='\e[1;31m'
 white='\e[1;37m'
 try='\e[0;103m'
@@ -124,9 +124,6 @@ echo -e " ${white}UPLOAD            $today_tx $today_txv      $yesterday_tx $yes
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv"
 echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${cyan}TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat
-echo -e " ${white}                     $total_ssh               $total_xray                $total_v2ray"
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${bred}                         • MAIN MENU •                           "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${purple}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
@@ -134,7 +131,7 @@ echo -e " ${purple}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS
 echo -e " ${purple}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
 echo -e " ${purple}[  7 ] TROJAN GFW                     [ 99 ] BANDWIDTH USAGE"
 echo -e " ${yellow}════════════════════════════════════════════════════════════════="
-echo -e " ${bred}                        • SYSTEM MENU •                          "${NC}
+echo -e " ${bred1}                        • SYSTEM MENU •                          "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${purple}[  8 ] ADD/CHANGE DOMAIN VPS          [  9 ] CHANGE PORT SERVICE"
 echo -e " [ 10 ] CHANGE DNS SERVER              [ 11 ] RENEW CERTIFICATION"
