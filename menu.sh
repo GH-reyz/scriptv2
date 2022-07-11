@@ -88,7 +88,6 @@ echo -e  " [ 14 ] REBOOT VPS                      [ 15 ] SPEEDTEST VPS"
 echo -e  " [ 16 ] SYSTEM INFORMATION              [ 17 ] CHECK GEO LOCATION"
 echo -e  " [ 18 ] CHECK SERVICE ERROR             [ 19 ] UPDATE SCRIPT"
 echo -e  " [ 19 ] UPDATE SCRIPT                   [  0 ] EXIT MENU${NC} "
-echo -e  " [ 20 ] THEME MENU"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "
 echo -e  " ${white}Premium Script By Reyz-V4" 
 echo -e  " ${white}Thank You For Using Script By Reyz-V4" 
@@ -157,10 +156,7 @@ echo -e "\e[0m"
    ;; 
   19)
    update  
-   ;;   
-  20)
-   menu1
-   ;;  
+   ;;     
    0)
    sleep 0.5
    clear
