@@ -37,7 +37,7 @@ uram=$(free -m | awk 'NR==2 {print $3}')
 fram=$(free -m | awk 'NR==2 {print $4}')
 cpu_usage+=" %"
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
-exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $3}')
+exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $IPVPS | awk '{print $3}')
 
 
 echo -e  "    ____                      _    ____ __ " | lolcat
