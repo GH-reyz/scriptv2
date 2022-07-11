@@ -122,7 +122,7 @@ echo -e "\e[0m"
    ;;
    11)
    passwd
-  12)
+   12)
    checksystem 
    ;;     
    0)
