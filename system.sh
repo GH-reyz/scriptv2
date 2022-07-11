@@ -1,20 +1,18 @@
 #!/bin/bash
 clear
 red='\e[1;31m'
-green='\e[0;32m'
+green='\e[1;33m'
 NC='\e[0m'
-ok='\e[0;47;30m'
+ok='\e[0;m'
 
 echo -e  " ${red}=========================================================================="
-echo -e  " ${ok}                                  SYSTEM MENU "                                                                                                  
+echo -e  " ${}                                  SYSTEM MENU "                                                                                                  
 echo -e  " ${red}=========================================================================="
 echo -e  " ${red}[  1 ] ADD/CHANGE DOMAIN VPS           [  2 ] CHANGE PORT SERVICE"
 echo -e  " [ 3 ] CHANGE DNS SERVER               [ 4 ] RENEW CERTIFICATION"
 echo -e  " [ 5 ] WEBMIN MENU                     [ 6 ] CHECK RAM USAGE"
-echo -e  " [ 7 ] REBOOT VPS                      [ 8 ] SPEEDTEST VPS"
-echo -e  " [ 9 ] SYSTEM INFORMATION              [ 10 ] CHECK GEO LOCATION"
-echo -e  " [ 11] CHECK SERVICE ERROR             [ 12 ] UPDATE SCRIPT"
-echo -e  " [ 13] UPDATE SCRIPT                   [  0 ] EXIT MENU${NC} "
+echo -e  " [ 7 ] SPEEDTEST VPS                   [ 8 ] CHECK GEO LOCATION "
+echo -e  " [ 9 ] SYSTEM INFORMATION              [ 10] BANDWIDTH SERVER"
 echo -e "=========================================================================="
 echo -e "${red}[ 0 ] EXIT TO MENU"
 echo -e "=========================================================================="
@@ -43,25 +41,16 @@ case $v2raycore in
    ram
    ;;
    7)
-   reboot
-   ;;
-   8)
    speedtest
+   ;; 
+   8)
+    nf
+   ;;  
+   10)
+   vnstat
    ;;
    9)
    info
-   ;;
-   10)
-   nf
-   ;;
-   11)
-   checksystem  
-   ;;
-  12)
-   vnstat
-   ;; 
-  13)
-   update  
    ;;     
    0)
    sleep 0.5
