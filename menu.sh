@@ -159,7 +159,7 @@ echo -e "\e[0m"
    update  
    ;;   
   20)
-   menu1.sh
+   menu1
    ;;  
    0)
    sleep 0.5
