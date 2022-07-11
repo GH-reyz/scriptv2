@@ -76,7 +76,7 @@ echo -e  " ${red}═════════════════════
 echo -e  " ${red}[  1 ] SSH & OPENVPN                   [  2 ] WIREGUARD" 
 echo -e  " ${red}[  3 ] SHADOWSOCKS R                   [  4 ] SHADOWSOCKS OBFS"
 echo -e  " ${red}[  5 ] V2RAY CORE                      [  6 ] XRAY CORE" 
-echo -e  " ${red}[  7 ] TROJAN GFW                      [ 00 ] BANDWIDTH SERVER"
+echo -e  " ${red}[  7 ] TROJAN GFW                      [ 00 ] SYSTEM MENU"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
 echo -e  " ${bred}                        • SYSTEM MENU •                          "${NC}   
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "                       
@@ -151,7 +151,7 @@ echo -e "\e[0m"
    checksystem  
    ;;
   00)
-   vnstat
+   system
    ;; 
   19)
    update  
