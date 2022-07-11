@@ -123,7 +123,7 @@ echo -e "\e[0m"
    11)
    passwd
   12)
-  checksystem 
+   checksystem 
    ;;     
    0)
    sleep 0.5
