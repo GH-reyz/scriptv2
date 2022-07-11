@@ -40,12 +40,12 @@ cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $IPVPS | awk '{print $3}')
 
 
-echo -e  "    ____                      _    ____ __ " | lolcat
-echo -e  "   / __ \___  __  ______     | |  / / // / " | lolcat
-echo -e  "  / /_/ / _ \/ / / /_  /_____| | / / // /_ " | lolcat
-echo -e  " / _, _/  __/ /_/ / / //_____/ |/ /__  __/ " | lolcat
-echo -e  "/_/ |_|\___/\__, / /___/     |___/  /_/    " | lolcat
-echo -e  "           /____/                      "  | lolcat
+echo -e  " ${red}   ____                      _    ____ __ " 
+echo -e  "   / __ \___  __  ______     | |  / / // / " 
+echo -e  "  / /_/ / _ \/ / / /_  /_____| | / / // /_ " 
+echo -e  " / _, _/  __/ /_/ / / //_____/ |/ /__  __/ " 
+echo -e  "/_/ |_|\___/\__, / /___/     |___/  /_/    "
+echo -e  "           /____/                      "  
 echo -e  " ${red}Premium Script"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
 echo -e  " ${bred}                      • SERVER INFORMATION •                     "${NC}
@@ -75,7 +75,7 @@ echo -e  " ${bred}                         • MAIN MENU •                    
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
 echo -e  " ${red}[  1 ] SSH & OPENVPN                   [  7 ] TROJAN GFW" 
 echo -e  " ${red}[  2 ] WIREGUARD                       [  8 ] REBOOT SERVER"
-echo -e  " ${red}[  3 ] SHADOWSOCKS R                   [ 9  ] UPDATE SCRIPT" 
+echo -e  " ${red}[  3 ] SHADOWSOCKS R                   [  9 ] UPDATE SCRIPT" 
 echo -e  " ${red}[  4 ] SHADOWSOCKS OBFS                [ 10 ] SYSTEM MENU"
 echo -e  " ${red}[  5 ] V2RAY CORE                      [ 11 ] CHANGE PASSWORD"
 echo -e  " ${red}[  6 ] XRAY CORE                       [ 12 ] DONT PUSH !"
