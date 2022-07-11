@@ -1,29 +1,29 @@
 ini#!/bin/bash
 clear
-red='\e[1;31m'
+red='\e[1;35m'
+bred1='\e[45m'
+bred='\e[41m'
+blue='\e[1;34m'
+blue_b='\e[1;94m'
+yellow='\e[1;33m'
+purple='\e[1;31m'
 white='\e[1;37m'
-bred='\e[0;47;30m'
-green='\e[0;32m'
-blue='\e[0;34m'
-blue_b='\e[0;94m'
-purple='\e[1;35m'
+try='\e[0;103m'
+cyan='\e[1;36m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
-IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $MYIP | awk '{print $4}')
+MYIP=$(wget -qO- icanhazip.com)
+IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $MYIP | awk '{print $4}')
 if [ $MYIP = $IZIN ]; then
-    echo -e ""
-    clear
+  echo -e ""
+  clear
 else
   echo -e ""
-    echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER${NC}"
-    exit 1
+  echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER @GHReyz${NC}"
+  exit 1
 fi
 echo -e " "
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
-cekxray="$(openssl x509 -dates -noout < /etc/v2ray/v2ray.crt)"                                      
-expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
-name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
 TIME=$(curl -sS ip-api.com | grep -w "timezone" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf)
 ISP=$(curl -sS ip-api.com | grep -w "isp" | awk '{print $3,$4,$5,$6,$7,$8,$9}' | cut -d'"' -f2 | cut -d',' -f1 | tee -a /etc/afak.conf)
@@ -37,6 +37,9 @@ uram=$(free -m | awk 'NR==2 {print $3}')
 fram=$(free -m | awk 'NR==2 {print $4}')
 cpu_usage+=" %"
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
+cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
+expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
+name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
 exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $3}')
 c_xtls=$(grep -oc '### [^ ]*' /etc/xray/vless-direct.json | cut -d' ' -f2)
 c_xvmess=$(grep -oc '### [^ ]*' /etc/xray/v2ray-tls.json | cut -d' ' -f2)
@@ -89,137 +92,139 @@ else
   yesterday_txv=NULL
 fi
 rm -f /root/t1
-echo -e  " "
-echo -e  "  ${red}██████╗░███████╗██╗░░░██╗███████╗░░░ ████████╗███████╗░█████╗░██╗░░██╗" 
-echo -e  "  ██╔══██╗██╔════╝╚██╗░██╔╝╚════██║░░░╚══ ██╔══╝██╔════╝██╔══██╗██║░░██║" 
-echo -e  "  ██████╔╝█████╗░░░╚████╔╝░░░███╔═╝░░░░░░ ██║░░░█████╗░░██║░░╚═╝███████║" 
-echo -e  "  ██╔══██╗██╔══╝░░░░╚██╔╝░░██╔══╝░░░░░░░░ ██║░░░██╔══╝░░██║░░██╗██╔══██║" 
-echo -e  "  ██║░░██║███████╗░░░██║░░░███████╗ ██╗░░░██║░░░███████╗╚█████╔╝██║░░██║" 
-echo -e  "  ╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝ ╚═╝░░░╚═╝░░░╚══════╝░╚════╝░╚═╝░░╚═╝" 
-echo -e  " ${red} Premium Script"
-echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${bred}                      • SERVER INFORMATION •                     "${NC}
-echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${red}CPU MODEL                   : $cname"
-echo -e  " ${red}NUMBER OF CORES             : $cores"
-echo -e  " ${red}CPU USAGE                   : $cpu_usage1 %"
-echo -e  " ${red}TOTAL RAM                   : $tram MB"
-echo -e  " ${red}USED RAM                    : $uram MB"
-echo -e  " ${red}FREE RAM                    : $fram MB"
-echo -e  " ${red}SYSTEM UPTIME               : $up"
-echo -e  " ${red}ISP/PROVIDER NAME           : $ISP"
-echo -e  " ${red}CITY LOCATION               : $city${NC}"
-echo -e  " ${red}TIME LOCATION               : $TIME"
-echo -e  " ${red}VPS TYPE                    : PREMIUM"
-echo -e  " ${red}IP VPS NUMBER               : $IPVPS${NC}"
-echo -e  " ${red}DOMAIN                      : $DOMAIN${NC}"
-echo -e  " ${red}SCRIPT VERSION              : REYZ-V4 (V2)"
-echo -e  " ${red}OS VERSION                  : `hostnamectl | grep "Operating System" | cut -d ' ' -f5-`"${NC}
-echo -e  " ${red}KERNEL VERSION              : `uname -r`${NC}"
-echo -e  " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
-echo -e  " ${red}CLIENT NAME                 : $name${NC}"
-echo -e  " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
-echo -e  " ${red}CONTACT TELEGRAM            : @GHReyz"
-echo -e  " ${red}═════════════════════════════════════════════════════════════════ "
+bash /root/.fontsam/banner
+echo -e "  Premium Script" | lolcat
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
+echo -e " ${bred1}                      • SERVER INFORMATION •                     "${NC}
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
+echo -e " ${red}CPU MODEL                   :$cname"
+echo -e " ${red}NUMBER OF CORES             : $cores"
+echo -e " ${red}CPU USAGE                   : $cpu_usage1 %"
+echo -e " ${red}CPU FREQUENCY               :$freq MHz"
+echo -e " ${red}TOTAL AMOUNT OF RAM         : $tram MB"
+echo -e " ${red}USED RAM                    : $uram MB"
+echo -e " ${red}FREE RAM                    : $fram MB"
+echo -e " ${red}SYSTEM UPTIME               : $up"
+echo -e " ${red}ISP/PROVIDER NAME           : $ISP"
+echo -e " ${red}CITY LOCATION               : $city${NC}"
+echo -e " ${red}TIME LOCATION               : $TIME"
+echo -e " ${red}IP VPS NUMBER               : $IPVPS"
+echo -e " ${red}DOMAIN NAME                 : $DOMAIN${NC}"
+echo -e " ${red}VPS TYPE                    : PREMIUM"
+echo -e " ${red}SCRIPT VERSION              : REYZ-V4 (V1)"
+echo -e " ${red}CLIENT NAME                 : $name${NC}"
+echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
+echo -e " ${red}OS VERSION                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
+echo -e " ${red}KERNEL VERSION              : $(uname -r)${NC}"
+echo -e " ${red}EXP DATE CERT V2RAY/XRAY    : $expxray${NC}"
+echo -e " ${red}TELEGRAM                    : @GHReyz"
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH" | lolcat
 echo -e " ${white}UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv"
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv"
-echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v" 
-echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${bred}                         • MAIN MENU •                           "${NC}                                      
-echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${red}[  1 ] SSH & OPENVPN                   [  2 ] WIREGUARD" 
-echo -e  " ${red}[  3 ] SHADOWSOCKS R                   [  4 ] SHADOWSOCKS OBFS"
-echo -e  " ${red}[  5 ] V2RAY CORE                      [  6 ] XRAY CORE" 
-echo -e  " ${red}[  7 ] TROJAN GFW"
-echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
-echo -e  " ${bred}                        • SYSTEM MENU •                          "${NC}   
-echo -e  " ${red}═════════════════════════════════════════════════════════════════ "                       
-echo -e  " ${red}[  8 ] ADD/CHANGE DOMAIN VPS           [  9 ] CHANGE PORT SERVICE"
-echo -e  " [ 10 ] CHANGE DNS SERVER               [ 11 ] RENEW CERTIFICATION"
-echo -e  " [ 12 ] WEBMIN MENU                     [ 13 ] CHECK RAM USAGE"
-echo -e  " [ 14 ] REBOOT VPS                      [ 15 ] SPEEDTEST VPS"
-echo -e  " [ 16 ] SYSTEM INFORMATION              [ 17 ] CHECK GEO LOCATION"
-echo -e  " [ 18 ] CHECK SERVICE ERROR             [ 19 ] UPDATE SCRIPT"
-echo -e  " [ 0  ] EXIT MENU                       [ 00 ] BANDWIDTH SERVER"
-echo -e  " ${red}═════════════════════════════════════════════════════════════════ "
-echo -e  " ${white}Premium Script By Reyz-V4" 
-echo -e  " ${white}Thank You For Using Script By Reyz-V4" 
-echo -e  " ${red}═════════════════════════════════════════════════════════════════ "
-echo -e  "  "
-echo -e "\e[1;31m"
-read -p  "     Please select an option :  " menu
+echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v"
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
+echo -e " ${cyan}TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat
+echo -e " ${white}                     $total_ssh               $total_xray                $total_v2ray"
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
+echo -e " ${bred}                         • MAIN MENU •                           "${NC}
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
+echo -e " ${purple}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
+echo -e " ${purple}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS"
+echo -e " ${purple}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
+echo -e " ${purple}[  7 ] TROJAN GFW                     [ 99 ] BANDWIDTH USAGE"
+echo -e " ${yellow}════════════════════════════════════════════════════════════════="
+echo -e " ${bred}                        • SYSTEM MENU •                          "${NC}
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
+echo -e " ${purple}[  8 ] ADD/CHANGE DOMAIN VPS          [  9 ] CHANGE PORT SERVICE"
+echo -e " [ 10 ] CHANGE DNS SERVER              [ 11 ] RENEW CERTIFICATION"
+echo -e " [ 12 ] WEBMIN MENU                    [ 13 ] CHECK RAM USAGE"
+echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
+echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
+echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
+echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
+echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰"
+echo -e " 🔰 Thank You For Using Script By Reyz-V4 🔰"
+echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
+echo -e " "
+echo -e "\e[1;37m"
+read -p "     Please select an option :  " menu
+echo -e " "
 echo -e "\e[0m"
- case $menu in
-   1)
-   mssh
-   ;;
-   2)
-   mwg
-   ;;
-   3)
-   mssr
-   ;;
-   4)
-   mss
-   ;;
-   5)
-   mv2raycore
-   ;;
-   6)
-   mxraycore
-   ;;
-   7)
-   mtrojan
-   ;;
-   8)
-   add-host
-   ;;
-   9)
-   change
-   ;;
-   10)
-   mdns
-   ;;
-   11)
-   recert-xrayv2ray
-   ;;
-   12)
-   wbmn
-   ;;
-   13)
-   ram
-   ;;
-   14)
-   reboot
-   ;;
-   15)
-   speedtest
-   ;;
-   16)
-   info
-   ;;
-   17)
-   nf
-   ;;
-   18)
-   checksystem  
-   ;;
-  00)
-   vnstat
-   ;; 
-  19)
-   update  
-   ;;   
-   0)
-   sleep 0.5
-   clear
-   jinggo
-   ;;
-   *)
-   echo -e "ERROR!! Please Enter an Correct Number"
-   sleep 1
-   clear
-   menu
-   ;;
-   esac
+case $menu in
+1)
+  mssh
+  ;;
+2)
+  mwg
+  ;;
+3)
+  mssr
+  ;;
+4)
+  mss
+  ;;
+5)
+  mv2raycore
+  ;;
+6)
+  mxraycore
+  ;;
+7)
+  mtrojan
+  ;;
+8)
+  add-host
+  ;;
+9)
+  change
+  ;;
+10)
+  mdns
+  ;;
+11)
+  recert-xrayv2ray
+  ;;
+12)
+  wbmn
+  ;;
+13)
+  ram
+  ;;
+14)
+  reboot
+  ;;
+15)
+  speedtest
+  ;;
+16)
+  info
+  ;;
+17)
+  nf
+  ;;
+18)
+  banner_changer
+  ;;
+19)
+  checksystem
+  ;;
+20)
+  update
+  ;;
+99)
+  vnstat
+  ;;
+0)
+  sleep 0.5
+  clear
+  jinggo
+  ;;
+*)
+  echo -e "ERROR!! Please Enter an Correct Number"
+  sleep 1
+  clear
+  menu
+  ;;
+esac
