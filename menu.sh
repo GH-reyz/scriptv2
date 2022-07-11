@@ -78,7 +78,7 @@ echo -e  " ${red}[  2 ] WIREGUARD                       [  8 ] REBOOT SERVER"
 echo -e  " ${red}[  3 ] SHADOWSOCKS R                   [  9 ] UPDATE SCRIPT" 
 echo -e  " ${red}[  4 ] SHADOWSOCKS OBFS                [ 10 ] SYSTEM MENU"
 echo -e  " ${red}[  5 ] V2RAY CORE                      [ 11 ] CHANGE PASSWORD"
-echo -e  " ${red}[  6 ] XRAY CORE                       [ 12 ] DONT PUSH !"
+echo -e  " ${red}[  6 ] XRAY CORE                       [ 12 ] CHECK SYSTEM ERROR"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "                           
 echo -e  " ${red}[  0 ] EXIT MENU${NC} "
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ "
@@ -123,6 +123,9 @@ echo -e "\e[0m"
    11)
    passwd
    ;;     
+   12)
+   checksystem
+   ;;
    0)
    sleep 0.5
    clear
