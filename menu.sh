@@ -121,7 +121,7 @@ echo -e  " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e  " ${red}CONTACT TELEGRAM            : @GHReyz" 
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e "  TRAFFIC           TODAY          YESTERDAY          MONTH" | lolcat
-echo -e " ${white}UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv"
+echo -e "  ${white}UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv"
 echo -e "  DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv"
 echo -e "  TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v"
 echo -e  " ${red}═════════════════════════════════════════════════════════════════ " 
