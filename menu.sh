@@ -23,7 +23,7 @@ IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 cekxray="$(openssl x509 -dates -noout < /etc/v2ray/v2ray.crt)"                                      
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
-name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
+name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $IPVPS | awk '{print $2}')
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
 TIME=$(curl -sS ip-api.com | grep -w "timezone" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf)
 ISP=$(curl -sS ip-api.com | grep -w "isp" | awk '{print $3,$4,$5,$6,$7,$8,$9}' | cut -d'"' -f2 | cut -d',' -f1 | tee -a /etc/afak.conf)
