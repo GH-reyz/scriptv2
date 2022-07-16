@@ -37,8 +37,8 @@ cpu_usage+=" %"
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
-name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
-exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $3}')
+name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $IPVPS | awk '{print $2}')
+exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $IPVPS | awk '{print $3}')
 c_xtls=$(grep -oc '### [^ ]*' /etc/xray/vless-direct.json | cut -d' ' -f2)
 c_xvmess=$(grep -oc '### [^ ]*' /etc/xray/v2ray-tls.json | cut -d' ' -f2)
 c_xvless=$(grep -oc '### [^ ]*' /etc/xray/vless-tls.json | cut -d' ' -f2)
@@ -107,7 +107,7 @@ echo -e " ${red}TIME LOCATION               : $TIME"
 echo -e " ${red}IP VPS NUMBER               : $IPVPS"
 echo -e " ${red}DOMAIN NAME                 : $DOMAIN${NC}"
 echo -e " ${red}VPS TYPE                    : PREMIUM"
-echo -e " ${red}SCRIPT VERSION              : REYZ-V4 (V1)"
+echo -e " ${red}SCRIPT VERSION              : REYZ-V4 (V2)"
 echo -e " ${red}CLIENT NAME                 : $name${NC}"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}OS VERSION                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
@@ -125,7 +125,7 @@ echo -e " ${yellow}════════════════════�
 echo -e " ${purple}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
 echo -e " ${purple}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS"
 echo -e " ${purple}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
-echo -e " ${purple}[  7 ] TROJAN GFW                     [ 99 ] BANDWIDTH SERVER"
+echo -e " ${purple}[  7 ] TROJAN GFW"
 echo -e " ${yellow}════════════════════════════════════════════════════════════════="
 echo -e " ${bred1}                        • SYSTEM MENU •                          "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
@@ -134,7 +134,7 @@ echo -e " [ 10 ] CHANGE DNS SERVER              [ 11 ] RENEW CERTIFICATION"
 echo -e " [ 12 ] WEBMIN MENU                    [ 13 ] CHECK RAM USAGE"
 echo -e " [ 14 ] REBOOT VPS                     [ 15 ] SPEEDTEST VPS"
 echo -e " [ 16 ] DISPLAY SYSTEM INFORMATION     [ 17 ] CHECK STREAM GEO"
-echo -e " [ 18 ] CHANGE SCRIPT BANNER           [ 19 ] CHECK SERVICE ERROR"
+echo -e " [ 18 ] CHECK BANDWIDTH SERVER         [ 19 ] CHECK SERVICE ERROR"
 echo -e " [ 20 ] UPDATE SCRIPT                  [  0 ] EXIT MENU${NC}"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${white}🔰 Premium Script By Reyz-V4 🔰"
@@ -198,7 +198,7 @@ case $menu in
   nf
   ;;
 18)
-  banner_changer
+  vnstat
   ;;
 19)
   checksystem
