@@ -90,8 +90,10 @@ else
   yesterday_txv=NULL
 fi
 rm -f /root/t1
-bash /root/.fontsam/banner
-echo -e "  Premium Script" | lolcat
+
+echo -e " ╔═╗┬─┐┌─┐┌┬┐┬┬ ┬┌┬┐  ╔═╗┌─┐┬─┐┬┌─┐┌┬┐" | lolcat
+echo -e " ╠═╝├┬┘├┤ │││││ ││││  ╚═╗│  ├┬┘│├─┘ │" | lolcat 
+echo -e " ╩  ┴└─└─┘┴ ┴┴└─┘┴ ┴  ╚═╝└─┘┴└─┴┴   ┴ " | lolcat                                                                                                           
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${bred1}                      • SERVER INFORMATION •                     "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
