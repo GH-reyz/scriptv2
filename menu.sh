@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 red='\e[1;31m'
-bred1='\e[0;47;30m
+bred1='\e[0;47;30m'
 bred='\e[41m'
 blue='\e[1;34m'
 blue_b='\e[1;94m'
