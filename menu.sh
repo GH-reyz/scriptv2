@@ -12,7 +12,7 @@ try='\e[0;103m'
 cyan='\e[1;36m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
-IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $MYIP | awk '{print $4}')
+IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $MYIP | awk '{print $4}')
 if [ $MYIP = $IZIN ]; then
   echo -e ""
   clear
@@ -119,9 +119,6 @@ echo -e " TRAFFIC           TODAY          YESTERDAY          MONTH" | lolcat
 echo -e " ${white}UPLOAD            $today_tx $today_txv      $yesterday_tx $yesterday_txv         $month_tx $month_txv"
 echo -e " DOWNLOAD          $today_rx $today_rxv      $yesterday_rx $yesterday_rxv         $month_rx $month_rxv"
 echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v         $month $month_v"
-echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${cyan}TOTAL USER        SSH/OVPN          XRAY            V2RAY" | lolcat
-echo -e " ${white}                     $total_ssh               $total_xray                $total_v2ray"
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${bred}                         • MAIN MENU •                           "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
