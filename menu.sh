@@ -38,6 +38,9 @@ cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 cekxray="$(openssl x509 -dates -noout </etc/v2ray/v2ray.crt)"
 expxray=$(echo "${cekxray}" | grep 'notAfter=' | cut -f2 -d=)
 name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $IPVPS | awk '{print $2}')
+tram=$(free -m | awk 'NR==2 {print $2}')
+uram=$(free -m | awk 'NR==2 {print $3}')
+fram=$(free -m | awk 'NR==2 {print $4}')
 exp=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $IPVPS | awk '{print $3}')
 c_xtls=$(grep -oc '### [^ ]*' /etc/xray/vless-direct.json | cut -d' ' -f2)
 c_xvmess=$(grep -oc '### [^ ]*' /etc/xray/v2ray-tls.json | cut -d' ' -f2)
@@ -102,6 +105,8 @@ echo -e " ${red}NUMBER OF CORES             : $cores"
 echo -e " ${red}CPU USAGE                   : $cpu_usage1 %"
 echo -e " ${red}CPU FREQUENCY               :$freq MHz"
 echo -e " ${red}TOTAL AMOUNT OF RAM         : $tram MB"
+echo -e " ${red}USED RAM                    : $uram MB"
+echo -e " ${red}FREE RAM                    : $fram MB"
 echo -e " ${red}SYSTEM UPTIME               : $up"
 echo -e " ${red}ISP/PROVIDER NAME           : $ISP"
 echo -e " ${red}CITY LOCATION               : $city${NC}"
