@@ -305,7 +305,7 @@ chmod +x mdns
 chmod +x nf
 chmod +x update
 chmod +x system
-chmod +x system
+chmod +x themes
 sed -i -e 's/\r$//' system
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
