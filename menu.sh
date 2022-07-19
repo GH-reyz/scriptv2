@@ -129,7 +129,7 @@ echo -e " TOTAL             $today $today_v      $yesterday $yesterday_v        
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${bred1}                         • MAIN MENU •                           "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
-echo -e " ${purple}[  1 ] SSH & OPENVPN                  [  2 ] WIREGUARD"
+echo -e " $\e[$number (•5)\e[m \e[$below OPENSSH & OPENVPN\e[m                   [  2 ] WIREGUARD"
 echo -e " ${purple}[  3 ] SHADOWSOCKS R                  [  4 ] SHADOWSOCKS OBFS"
 echo -e " ${purple}[  5 ] V2RAY CORE                     [  6 ] XRAY CORE"
 echo -e " ${purple}[  7 ] TROJAN GFW"
