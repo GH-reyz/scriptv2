@@ -274,8 +274,6 @@ wget -O mdns "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/mdns.sh"
 wget -O nf "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/nf.sh"
 wget -O update "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/update.sh"
 wget -O system "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/system.sh"
-wget -o themes "https://raw.githubusercontent.com/GH-reyz/scriptv2/main/themes.sh"
-wget -o antitorrent "https://github.com/GH-reyz/scriptv2/blob/main/antitorrent.sh"
 chmod +x mssh
 chmod +x menu
 chmod +x add-host
@@ -306,12 +304,9 @@ chmod +x mdns
 chmod +x nf
 chmod +x update
 chmod +x system
-chmod +x themes
-chnod +x antitorrent
 sed -i -e 's/\r$//' system
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
-echo "0 0 * * * root delete" >> /etc/crontab
 # remove unnecessary files
 cd
 apt autoclean -y

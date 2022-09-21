@@ -136,15 +136,6 @@ wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/wg.sh && chmod +x w
 sleep 2
 clear
 
-#install v2ray
-echo -e "============================================="
-echo -e " ${green}  INSTALLING V2RAY${NC} "
-echo -e "============================================="
-sleep 2
-wget https://raw.githubusercontent.com/GH-reyz/scriptv2/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
-sleep 2
-clear
-
 #install Xray
 echo -e "============================================="
 echo -e " ${green} INSTALLING XRAY${NC} "
@@ -200,10 +191,6 @@ echo "   - OPENVPN OHP             : 8000"  | tee -a log-install.txt
 echo "   - Shadowsocks-R           : 1443-1543"  | tee -a log-install.txt
 echo "   - SS-OBFS TLS             : 2443-2543"  | tee -a log-install.txt
 echo "   - SS-OBFS HTTP            : 3443-3543"  | tee -a log-install.txt
-echo "   - V2RAY Vmess TLS         : 5443"  | tee -a log-install.txt
-echo "   - V2RAY Vmess None TLS    : 6443"  | tee -a log-install.txt
-echo "   - V2RAY Vless TLS         : 7443"  | tee -a log-install.txt
-echo "   - V2RAY Vless None TLS    : 8443"  | tee -a log-install.txt
 echo "   - Trojan                  : 9443"  | tee -a log-install.txt
 echo "   - XRAY VMESS TLS          : 2929"  | tee -a log-install.txt
 echo "   - XRAY VMESS NON TLS      : 3939"  | tee -a log-install.txt
