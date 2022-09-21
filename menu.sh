@@ -136,7 +136,7 @@ echo -e " ${yellow}════════════════════�
 echo -e " ${bred1}                        • SYSTEM MENU •                          "${NC}
 echo -e " ${yellow}═════════════════════════════════════════════════════════════════"
 echo -e " ${purple}[  7 ] ADD/CHANGE DOMAIN VPS          [  8 ] CHANGE PORT SERVICE"
-echo -e " [ 9 ] CHANGE DNS SERVER              [ 10 ] RENEW CERTIFICATION"
+echo -e " [ 9 ] CHANGE DNS SERVER               [ 10 ] RENEW CERTIFICATION"
 echo -e " [ 11 ] WEBMIN MENU                    [ 12 ] CHECK RAM USAGE"
 echo -e " [ 13 ] REBOOT VPS                     [ 14 ] SPEEDTEST VPS"
 echo -e " [ 15 ] DISPLAY SYSTEM INFORMATION     [ 16 ] CHECK STREAM GEO"
