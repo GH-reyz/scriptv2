@@ -12,12 +12,6 @@ try='\e[0;103m'
 cyan='\e[1;36m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
-else
-  echo -e ""
-  echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER @GHReyz${NC}"
-  exit 1
-fi
-echo -e " "
 IPVPS=$(curl -s icanhazip.com)
 DOMAIN=$(cat /etc/v2ray/domain)
 city=$(curl -s https://ipinfo.io/json | grep -o 'city": "[^"]*' | grep -o '[^"]*$')
