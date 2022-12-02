@@ -12,10 +12,6 @@ try='\e[0;103m'
 cyan='\e[1;36m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com)
-IZIN=$(curl https://raw.githubusercontent.com/GH-reyz/GH-reyzv2/main/registerv2 | grep $MYIP | awk '{print $4}')
-if [ $MYIP = $IZIN ]; then
-  echo -e ""
-  clear
 else
   echo -e ""
   echo -e "${green}ACCESS DENIED...PM TELEGRAM OWNER @GHReyz${NC}"
@@ -115,7 +111,7 @@ echo -e " ${red}IP VPS NUMBER               : $IPVPS"
 echo -e " ${red}DOMAIN NAME                 : $DOMAIN${NC}"
 echo -e " ${red}VPS TYPE                    : PREMIUM"
 echo -e " ${red}SCRIPT VERSION              : REYZ-V4 (V2)"
-echo -e " ${red}CLIENT NAME                 : $name${NC}"
+echo -e " ${red}CLIENT NAME                 : Preemium Lifetime"
 echo -e " ${red}EXP SCRIPT ACCSESS          : $exp${NC}"
 echo -e " ${red}OS VERSION                  : $(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)"${NC}
 echo -e " ${red}KERNEL VERSION              : $(uname -r)${NC}"
